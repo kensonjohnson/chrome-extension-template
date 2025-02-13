@@ -61,6 +61,15 @@ You can test your extension by loading it into any Chrome based browser:
 After these steps, your extension should show up in the list of extensions up top and in the extensions tab.
 You can click on your extension in the extension list (top right, looks like a puzzle piece).
 
+### Building for Production
+
+To deploy your extension to the store, you will need to [zip your extension before uploading it](https://developer.chrome.com/docs/webstore/prepare).
+To make this easy, a very simple [utility script](./zip.js) is included to zip up your extension.
+Feel free to adjust this script to fit your needs, such as changing the name of the created zip file.
+This script is wired up to the `release` npm script.
+
+***To build for production and deployment simply run: `npm run release`***
+
 ## Project Structure
 
 ```
