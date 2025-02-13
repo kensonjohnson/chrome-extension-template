@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Extension Template",
+  "version": "0.0.1",
+  "description": "Use this template to start your journey!",
+  "permissions": ["scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/*", "https://google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
